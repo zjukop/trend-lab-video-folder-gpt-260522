@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "video-folder-gpt"
+version = "0.1.0"
+description = "Local video folder search with timestamp-style citations."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+video-folder-gpt = "video_folder_gpt.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_folder_gpt"]
